@@ -5,20 +5,20 @@
 class Bbx < Formula
   desc ""
   homepage "https://github.com/etng/homebrew-taps"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/etng/bbx/releases/download/v0.0.4/bbx_0.0.4_Darwin_x86_64.tar.gz"
-      sha256 "b9739488553a532b610ffb15b139f206380a80b66120cea9dadf4c479cc984c0"
+      url "https://github.com/etng/bbx/releases/download/v0.0.5/bbx_0.0.5_Darwin_x86_64.tar.gz"
+      sha256 "c3f54c6fba940a762c142f78203d044a955d0adbad3304e3c732f4983fb81c9b"
 
       def install
         bin.install "bbx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/etng/bbx/releases/download/v0.0.4/bbx_0.0.4_Darwin_arm64.tar.gz"
-      sha256 "49e81916bdfa94f9bfd37c5246563381f2610646855edf011194512ddd678f5c"
+      url "https://github.com/etng/bbx/releases/download/v0.0.5/bbx_0.0.5_Darwin_arm64.tar.gz"
+      sha256 "2931099aad2f6861f40cf6e361987b3a08a16a3178022be25b29aa8a4d87db78"
 
       def install
         bin.install "bbx"
@@ -27,17 +27,17 @@ class Bbx < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/etng/bbx/releases/download/v0.0.4/bbx_0.0.4_Linux_arm64.tar.gz"
-      sha256 "32d3d9e013eb5a9ed4c9df454e257a5a3a05894b28de7b3c01a4a075d0803fa1"
+    if Hardware::CPU.intel?
+      url "https://github.com/etng/bbx/releases/download/v0.0.5/bbx_0.0.5_Linux_x86_64.tar.gz"
+      sha256 "75770b1e47a96bc26d84e4745c25fc6d9b0136ca68ef7991e37bb23af9775d9f"
 
       def install
         bin.install "bbx"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/etng/bbx/releases/download/v0.0.4/bbx_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "a8b34bfaeada2d4a50867325bdf6db2645833a253a25af75f4aed76a477ffb71"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/etng/bbx/releases/download/v0.0.5/bbx_0.0.5_Linux_arm64.tar.gz"
+      sha256 "d184dac1fb5cebe5c224d12a42b0e8894b4f8ff49c77941d76f63c976d1c9cb6"
 
       def install
         bin.install "bbx"
