@@ -4,7 +4,7 @@
 # 每次在 etng/autoz 打 v* tag 时，发布流水线会重新生成本文件并推送到本仓库。
 cask "autoz" do
   version "0.8.0"
-  sha256 "a9bbd8557c0bac5495bd16015eaf562e7c560fccb628d8e557803e4f16308b57"
+  sha256 "4bbfb00660a52974ddde61f02b37af8b07cb95eff4f6c3598a7dbe033482b297"
 
   url "https://github.com/etng/autoz/releases/download/v#{version}/AutoZ-#{version}.tar.gz"
   name "AutoZ"
