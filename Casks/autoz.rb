@@ -3,8 +3,8 @@
 # 源模板: https://github.com/etng/autoz  →  .github/templates/autoz.rb.tmpl
 # 每次在 etng/autoz 打 v* tag 时，发布流水线会重新生成本文件并推送到本仓库。
 cask "autoz" do
-  version "1.2.0"
-  sha256 "971f93d3288062822154cda6ecf018bb52becce639292ad6290a436ebfdc4582"
+  version "0.8.0"
+  sha256 "747b1ea807e112bac91417931f87e1f1b761445924b28af14c424cdbd50fb8f0"
 
   url "https://github.com/etng/autoz/releases/download/v#{version}/AutoZ-#{version}.tar.gz"
   name "AutoZ"
@@ -32,6 +32,10 @@ cask "autoz" do
     若打开时仍提示「已损坏」，请手动执行：
       xattr -dr com.apple.quarantine /Applications/AutoZ.app
 
+    首次运行会默认开启「登录时自动启动」（写 ~/Library/LaunchAgents/cn.y10n.autoz.plist，
+    无需管理员密码）。在「高级配置…」→ 启动 里可随时关掉，也可在
+    「系统设置 → 通用 → 登录项」里撤销。
+
     想让改时区时不再弹管理员密码框，首次使用请在
     「高级配置…」→ 改时区方式 里安装一次免授权助手。
 
@@ -40,6 +44,7 @@ cask "autoz" do
 
   zap trash: [
     "~/Library/Application Support/AutoZ",
+    "~/Library/LaunchAgents/cn.y10n.autoz.plist",
     "~/Library/Logs/AutoZ.log",
     "~/Library/Preferences/cn.y10n.autoz.plist",
     "~/Library/Saved Application State/cn.y10n.autoz.savedState",
