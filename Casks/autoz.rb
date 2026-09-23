@@ -4,7 +4,7 @@
 # 每次在 etng/autoz 打 v* tag 时，发布流水线会重新生成本文件并推送到本仓库。
 cask "autoz" do
   version "1.2.0"
-  sha256 "b0ac0ccc90f2a9448ae81768ef3de93160885037d90b85e7c826e27da4ee53fa"
+  sha256 "971f93d3288062822154cda6ecf018bb52becce639292ad6290a436ebfdc4582"
 
   url "https://github.com/etng/autoz/releases/download/v#{version}/AutoZ-#{version}.tar.gz"
   name "AutoZ"
@@ -19,11 +19,12 @@ cask "autoz" do
 
   app "AutoZ.app"
 
-  postflight do
+  postflight_steps do
     # 应用未做 Apple 公证（ad-hoc 签名）。下载后会被打上隔离标记，
     # 不去掉的话首次打开会被 Gatekeeper 拦下报「已损坏」。
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/AutoZ.app"]
+    # 路径必须用 {{appdir}} 模板：steps 块在独立 DSL 上求值，拿不到 cask 的 appdir 方法；
+    # 也不能写 postflight，Homebrew 7 已废弃它（改用 *_steps + 规范化步骤）。
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/AutoZ.app"]
   end
 
   caveats <<~EOS
