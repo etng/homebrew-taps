@@ -4,9 +4,9 @@
 class OsdNotify < Formula
   desc "Show clear, source-aware notifications on every macOS display"
   homepage "https://github.com/etng/osd_notify"
-  url "https://github.com/etng/osd_notify/releases/download/v1.0.0/osd-notify-v1.0.0-macos-universal.tar.gz"
-  version "1.0.0"
-  sha256 "a1b5a7c0203942f0aa2510221a120de154893446c05cda0721b9752c47f8c440"
+  url "https://github.com/etng/osd_notify/releases/download/v1.0.1/osd-notify-v1.0.1-macos-universal.tar.gz"
+  version "1.0.1"
+  sha256 "895e9c1a2eac62206e4fdec1c59c6059868ae5bc4c53b513520a73c0d8df4a41"
 
   livecheck do
     skip "Updated automatically by the osd-notify release workflow."
