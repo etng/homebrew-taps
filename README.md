@@ -47,10 +47,25 @@ brew trust --json v1
 brew install --cask etng/taps/autoz
 ```
 
-AutoZ 未做 Apple 公证（ad-hoc 签名）。cask 的 `postflight` 会在安装后自动去掉隔离标记
+AutoZ 未做 Apple 公证（ad-hoc 签名）。cask 的 `postflight_steps` 会在安装后自动去掉隔离标记
 （等价于 `xattr -dr com.apple.quarantine /Applications/AutoZ.app`），不需要你手动处理。
 
 用法、原理、卸载说明见 → [etng/autoz](https://github.com/etng/autoz)
+
+## osd-notify
+
+在所有显示器上显示浮层提醒的 macOS 命令行工具，支持提醒来源、定时字幕和文本背诵。
+
+```bash
+brew install etng/taps/osd-notify
+brew upgrade osd-notify
+```
+
+直接下载公开 Release 中的 Apple Silicon / Intel 通用二进制，无需 GitHub 登录，最低支持 macOS 13。
+二进制使用 ad-hoc 签名，Formula 的 `post_install_steps` 会自动移除本程序的 quarantine 标记。
+需要重新执行时运行 `brew postinstall etng/taps/osd-notify`。
+
+用法见 → [etng/osd_notify](https://github.com/etng/osd_notify)
 
 ## 仓库结构
 
