@@ -6,7 +6,7 @@ class OsdNotify < Formula
   homepage "https://github.com/etng/osd_notify"
   url "https://github.com/etng/osd_notify/releases/download/v1.0.0/osd-notify-v1.0.0-macos-universal.tar.gz"
   version "1.0.0"
-  sha256 "e7b20398d64b632092a130ffadc8f777fe6a04384b31e45617f2a3548a8d2c66"
+  sha256 "a1b5a7c0203942f0aa2510221a120de154893446c05cda0721b9752c47f8c440"
 
   livecheck do
     skip "Updated automatically by the osd-notify release workflow."
