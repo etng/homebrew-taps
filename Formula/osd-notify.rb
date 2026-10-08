@@ -20,7 +20,11 @@ class OsdNotify < Formula
 
   post_install_steps do
     # 二进制仅做 ad-hoc 签名，未做 Apple 公证；只移除本程序的隔离标记。
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{bin}}/osd-notify"]
+    # Homebrew 将已安装的二进制设为只读；临时允许所有者写入扩展属性，再恢复。
+    set_permissions "osd-notify", "0755", base: :bin
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{bin}}/osd-notify"],
+                          writable_paths: ["{{bin}}/osd-notify"]
+    set_permissions "osd-notify", "0555", base: :bin
   end
 
   test do
