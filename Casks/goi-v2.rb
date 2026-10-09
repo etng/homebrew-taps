@@ -1,7 +1,7 @@
 # 本地发布后更新版本与 DMG 校验和；Goi v2 使用独立的发行 tag。
 cask "goi-v2" do
   version "0.3.5"
-  sha256 "ba6e1aa0352fa4bb982df538036fc3595a462968ab33c0961cbb6ce5e2d716ba"
+  sha256 "6f0ec7b48fa3d9b57640e223a65b30b26b227e0f0e20e9f61f60c9c285edb64b"
 
   url "https://github.com/etng/goi/releases/download/goi-v2-v#{version}/Goi-v2-#{version}-macos-arm64.dmg"
   name "Goi v2"

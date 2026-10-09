@@ -62,6 +62,9 @@ brew install --cask etng/taps/goi-v2
 brew upgrade --cask etng/taps/goi-v2
 ```
 
+0.3.5 包已用包含文件夹导入和可读词典目录的构建替换。已经安装早期同版本包时，
+先运行 `brew update`，再运行 `brew reinstall --cask etng/taps/goi-v2`。
+
 cask 的 `postflight_steps` 安装后只对 `Goi v2.app` 移除 quarantine 标记。
 当前包使用 Apple Development 签名，未经 Apple 公证；划词所需的辅助功能权限仍须在系统设置中授予。
 卸载保留词典与学习数据。
