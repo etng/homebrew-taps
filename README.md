@@ -52,6 +52,22 @@ AutoZ 未做 Apple 公证（ad-hoc 签名）。cask 的 `postflight_steps` 会�
 
 用法、原理、卸载说明见 → [etng/autoz](https://github.com/etng/autoz)
 
+## Goi v2
+
+本地词典与词汇学习客户端，支持 MDX/MDD、可配置划词快捷键、生词本和 Anki。
+当前 0.3.5 预发布包提供 macOS Apple Silicon 版本，最低 macOS 13。
+
+```bash
+brew install --cask etng/taps/goi-v2
+brew upgrade --cask etng/taps/goi-v2
+```
+
+cask 的 `postflight_steps` 安装后只对 `Goi v2.app` 移除 quarantine 标记。
+当前包使用 Apple Development 签名，未经 Apple 公证；划词所需的辅助功能权限仍须在系统设置中授予。
+卸载保留词典与学习数据。
+
+[公开下载与对应源码](https://github.com/etng/goi/releases/tag/goi-v2-v0.3.5)也提供 Windows ARM64 安装包。
+
 ## osd-notify
 
 在所有显示器上显示浮层提醒的 macOS 命令行工具，支持提醒来源、定时字幕和文本背诵。
