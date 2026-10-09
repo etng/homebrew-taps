@@ -55,7 +55,7 @@ AutoZ 未做 Apple 公证（ad-hoc 签名）。cask 的 `postflight_steps` 会�
 ## Goi v2
 
 本地词典与词汇学习客户端，支持 MDX/MDD、可配置划词快捷键、生词本和 Anki。
-当前 0.3.5 预发布包提供 macOS Apple Silicon 版本，最低 macOS 13。
+当前 0.3.5 安装包提供 macOS Apple Silicon 版本，最低 macOS 13。
 
 ```bash
 brew install --cask etng/taps/goi-v2
