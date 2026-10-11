@@ -3,8 +3,8 @@
 # 源模板: https://github.com/etng/autoz  →  .github/templates/autoz.rb.tmpl
 # 每次在 etng/autoz 打 v* tag 时，发布流水线会重新生成本文件并推送到本仓库。
 cask "autoz" do
-  version "0.8.8"
-  sha256 "b92f15dde98a8295761f0e0dfd049db1dbcfe903120f6a66bff0055b23856b94"
+  version "0.9.0"
+  sha256 "b6f23b29fac5365657677e3688f71a2f1b19ce3e12ea6854f0fb4b0110d400ee"
 
   url "https://github.com/etng/autoz/releases/download/v#{version}/AutoZ-#{version}.tar.gz"
   name "AutoZ"
