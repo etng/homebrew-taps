@@ -86,6 +86,20 @@ brew upgrade osd-notify
 
 用法见 → [etng/osd_notify](https://github.com/etng/osd_notify)
 
+## cfdns
+
+Cloudflare DNS 配置驱动管理工具：给一份 `config.yaml` + 密钥，命令行完成解析的增删改、橙云/灰云（代理）切换、按域名/主机设置 SSL，并生成带域名 tab 的 HTML 报告。工作流类比 git：`pull` 拉现状 → `plan` 看 diff → `apply` 推上线。
+
+```bash
+brew install etng/taps/cfdns
+brew upgrade cfdns
+```
+
+公开 Release 中的 Apple Silicon / Intel 通用二进制，无需 GitHub 登录，最低支持 macOS 13（Ventura）。
+二进制使用 ad-hoc 签名，安装后直接使用，无需额外处理。
+
+用法、命令详解与 Agent 技能见 → [etng/cfdns](https://github.com/etng/cfdns)
+
 ## 仓库结构
 
 ```
