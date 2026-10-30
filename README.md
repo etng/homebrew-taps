@@ -98,6 +98,8 @@ brew upgrade cfdns
 公开 Release 中的 Apple Silicon / Intel 通用二进制，无需 GitHub 登录，最低支持 macOS 13（Ventura）。
 二进制使用 ad-hoc 签名，安装后直接使用，无需额外处理。
 
+另有 `cfdns ui` 子命令可起本地 Web 界面（仅 127.0.0.1，可视化编辑 / 预览 / 应用，删除操作强制逐条确认），适合不想登网页、也不想记命令的场景。
+
 用法、命令详解与 Agent 技能见 → [etng/cfdns](https://github.com/etng/cfdns)
 
 ## 仓库结构
