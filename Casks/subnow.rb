@@ -6,8 +6,8 @@
 # 源模板: https://github.com/etng/SubNow → scripts/make_cask.sh
 # 每次在 etng/SubNow 打 v* tag 时，发布流水线会重新生成本文件并推送到本仓库。
 cask "subnow" do
-  version "0.1.3"
-  sha256 "f4128bd66e63f7b03080c6bcf02826ec57de2607d643be5d263b0083d90eb02f"
+  version "0.1.4"
+  sha256 "923a5dfafa3995b4c10c1419cae989a5c6dcbb0d54765b6d453372a7a967460b"
 
   url "https://github.com/etng/SubNow/releases/download/v#{version}/SubNow-#{version}.dmg"
   name "SubNow"
