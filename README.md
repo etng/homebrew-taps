@@ -102,6 +102,22 @@ brew upgrade cfdns
 
 用法、命令详解与 Agent 技能见 → [etng/cfdns](https://github.com/etng/cfdns)
 
+## SubNow
+
+菜单栏字幕助手：检测 mpv / IINA 播放的无中文字幕视频，提醒后本地转录、翻译并热挂载双语字幕。
+
+```bash
+brew install --cask etng/taps/subnow
+brew upgrade --cask subnow
+```
+
+Apple Silicon，最低 macOS 14（Sonoma）。应用为 ad-hoc 签名、未做 Apple 公证；
+cask 的 `postflight_steps` 会在安装后自动去掉 quarantine 标记
+（等价于 `xattr -dr com.apple.quarantine /Applications/SubNow.app`）。
+首次启动会引导下载 whisper 模型，模型与配置保存在 `~/Library/Application Support/SubNow`。
+
+用法与开发说明见 → [etng/SubNow](https://github.com/etng/SubNow)
+
 ## 仓库结构
 
 ```
