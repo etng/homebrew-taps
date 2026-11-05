@@ -4,9 +4,9 @@
 class Cfdns < Formula
   desc "Cloudflare DNS 配置驱动管理工具 (配置即代码, 生成带域名 tab 的 HTML 报告)"
   homepage "https://github.com/etng/cfdns"
-  url "https://github.com/etng/cfdns/releases/download/v0.1.0/cfdns-v0.1.0-macos-universal.tar.gz"
-  version "0.1.0"
-  sha256 "3fc86ef1ff8ee0245e801efa3b602eedac5c39be00ca639a21949fb16f5d98d4"
+  url "https://github.com/etng/cfdns/releases/download/v0.1.1/cfdns-v0.1.1-macos-universal.tar.gz"
+  version "0.1.1"
+  sha256 "887840fad42021cf7411dc9d6f6309ee8dd2af97d41d9a15c8a901a7bc871e49"
 
   livecheck do
     skip "Updated automatically by the cfdns release workflow."
